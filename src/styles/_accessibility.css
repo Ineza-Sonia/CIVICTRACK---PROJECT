@@ -1,0 +1,123 @@
+/* ============================================================
+   CIVICTRACK — Accessibility Styles (WCAG 2.1 AA+)
+   ============================================================ */
+
+/* --- Skip Navigation Link --- */
+.skip-link {
+  position: fixed;
+  top: var(--space-4);
+  left: var(--space-4);
+  z-index: 9999;
+  padding: var(--space-3) var(--space-6);
+  background: var(--accent-primary);
+  color: var(--text-on-primary);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform var(--duration-fast);
+  box-shadow: var(--shadow-lg);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 3px solid var(--text-on-primary);
+  outline-offset: 2px;
+}
+
+/* --- Universal Focus Ring (keyboard-only) --- */
+:focus-visible {
+  outline: 2.5px solid var(--accent-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+:focus:not(:focus-visible) { outline: none; }
+
+/* --- Screen Reader Only --- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- ARIA Live Region --- */
+#a11y-announcer {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* --- Touch Targets (min 44×44px) --- */
+.touch-target {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================================
+   REDUCED MOTION — OS + manual toggle
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+[data-reduced-motion="true"] *,
+[data-reduced-motion="true"] *::before,
+[data-reduced-motion="true"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* ============================================================
+   HIGH CONTRAST extras
+   ============================================================ */
+[data-theme="high-contrast"] :focus-visible {
+  outline: 3px solid #FFFFFF;
+  outline-offset: 3px;
+}
+
+[data-theme="high-contrast"] a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
+/* Primary buttons: white bg needs black text in high-contrast */
+[data-theme="high-contrast"] .cta-primary-btn,
+[data-theme="high-contrast"] .btn-primary,
+[data-theme="high-contrast"] .submit-btn,
+[data-theme="high-contrast"] .cta-white-btn {
+  background: #fff !important;
+  color: #000 !important;
+  border-color: #fff !important;
+}
+
+/* --- Form accessibility --- */
+[aria-invalid="true"] {
+  border-color: var(--color-danger-500) !important;
+  box-shadow: 0 0 0 3px rgba(146,50,50,0.2);
+}
+
+[disabled], [aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}

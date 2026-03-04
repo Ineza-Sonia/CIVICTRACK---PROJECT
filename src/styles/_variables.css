@@ -1,0 +1,212 @@
+/* ============================================================
+   CIVICTRACK — Design Token System (Black & White Edition)
+   ============================================================ */
+
+:root {
+  /* --- Primary Palette: Black/Gray --- */
+  --color-primary-50:  #F5F5F5;
+  --color-primary-100: #E8E8E8;
+  --color-primary-200: #D0D0D0;
+  --color-primary-300: #A8A8A8;
+  --color-primary-400: #707070;
+  --color-primary-500: #111111;
+  --color-primary-600: #0D0D0D;
+  --color-primary-700: #080808;
+  --color-primary-800: #050505;
+  --color-primary-900: #000000;
+
+  /* --- Semantic Status Colors (kept for functional meaning) --- */
+  --color-success-500: #1A6B3C;
+  --color-success-100: #D4EDE1;
+  --color-warning-500: #7A5200;
+  --color-warning-100: #F5E6C8;
+  --color-danger-500:  #8B1A1A;
+  --color-danger-100:  #F5D5D5;
+  --color-info-500:    #1A4A5E;
+  --color-info-100:    #D0E8F5;
+
+  /* --- Neutral Scale --- */
+  --color-neutral-0:   #FFFFFF;
+  --color-neutral-50:  #F7F7F7;
+  --color-neutral-100: #EEEEEE;
+  --color-neutral-200: #DDDDDD;
+  --color-neutral-300: #BBBBBB;
+  --color-neutral-400: #888888;
+  --color-neutral-500: #555555;
+  --color-neutral-600: #3A3A3A;
+  --color-neutral-700: #2A2A2A;
+  --color-neutral-800: #1A1A1A;
+  --color-neutral-900: #111111;
+
+  /* --- Spacing Scale --- */
+  --space-1:  0.25rem;  --space-2:  0.5rem;
+  --space-3:  0.75rem; --space-4:  1rem;
+  --space-5:  1.25rem; --space-6:  1.5rem;
+  --space-8:  2rem;    --space-10: 2.5rem;
+  --space-12: 3rem;    --space-16: 4rem;
+  --space-20: 5rem;    --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* --- Typography --- */
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body:    'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono:    'IBM Plex Mono', monospace;
+
+  --text-xs:   0.75rem;  --text-sm:   0.875rem;
+  --text-base: 1rem;     --text-lg:   1.125rem;
+  --text-xl:   1.25rem;  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem; --text-4xl:  2.25rem;
+  --text-5xl:  3rem;     --text-6xl:  3.75rem;
+
+  --leading-tight:   1.2;
+  --leading-snug:    1.375;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.75;
+
+  /* --- Borders & Radius --- */
+  --radius-sm:   4px;   --radius-md:   8px;
+  --radius-lg:   12px;  --radius-xl:   16px;
+  --radius-full: 9999px;
+  --border-width: 1.5px;
+
+  /* --- Shadows --- */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md:  0 4px 12px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.08);
+  --shadow-lg:  0 10px 30px rgba(0,0,0,0.14), 0 4px 10px rgba(0,0,0,0.08);
+  --shadow-xl:  0 20px 50px rgba(0,0,0,0.18), 0 8px 20px rgba(0,0,0,0.10);
+  --shadow-focus: 0 0 0 3px rgba(0,0,0,0.35);
+
+  /* --- Transitions --- */
+  --duration-fast:   150ms;
+  --duration-normal: 250ms;
+  --duration-slow:   400ms;
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+
+  /* --- Layout --- */
+  --container-max: 1280px;
+  --header-height: 68px;
+  --sidebar-width: 260px;
+}
+
+/* ============================================================
+   LIGHT MODE — reduced dim colors for comfort
+   ============================================================ */
+[data-theme="light"], :root {
+  --bg-canvas:    #FAFAFA;
+  --bg-surface:   #FFFFFF;
+  --bg-surface-2: #F5F5F5;
+  --bg-surface-3: #EDEDED;
+  --bg-inset:     #F0F0F0;
+
+  --text-primary:   #1A1A1A;
+  --text-secondary: #3A3A3A;
+  --text-tertiary:  #4D4D4D;
+  --text-disabled:  #737373;
+  --text-on-primary:#FFFFFF;
+
+  --border-subtle:  #E5E5E5;
+  --border-default: #D4D4D4;
+  --border-strong:  #737373;
+
+  --accent-primary: #2563EB;
+  --accent-hover:   #1D4ED8;
+  --accent-active:  #1E40AF;
+  --accent-subtle:  #EFF6FF;
+  --accent-muted:   #DBEAFE;
+
+  --header-bg:   rgba(255,255,255,0.94);
+  --header-blur: blur(12px);
+  --overlay-bg:  rgba(0,0,0,0.4);
+}
+
+/* ============================================================
+   DARK MODE — reduced white/bright for comfort
+   ============================================================ */
+[data-theme="dark"] {
+  --bg-canvas:    #0F1419;
+  --bg-surface:   #1C2128;
+  --bg-surface-2: #252B33;
+  --bg-surface-3: #2D353E;
+  --bg-inset:     #161B22;
+
+  --text-primary:   #E6EDF3;
+  --text-secondary: #C5CDD6;
+  --text-tertiary:  #A3ACB9;
+  --text-disabled:  #6E7681;
+  --text-on-primary:#0F1419;
+
+  --border-subtle:  #30363D;
+  --border-default: #3D444D;
+  --border-strong:  #6E7681;
+
+  --accent-primary: #58A6FF;
+  --accent-hover:   #79B8FF;
+  --accent-active:  #A5D6FF;
+  --accent-subtle:  rgba(88,166,255,0.12);
+  --accent-muted:   rgba(88,166,255,0.2);
+
+  --header-bg:   rgba(28,33,40,0.94);
+  --header-blur: blur(12px);
+
+  --shadow-sm:    0 1px 3px rgba(0,0,0,0.45);
+  --shadow-md:    0 4px 12px rgba(0,0,0,0.5);
+  --shadow-lg:    0 10px 30px rgba(0,0,0,0.55);
+  --shadow-xl:    0 20px 50px rgba(0,0,0,0.6);
+  --shadow-focus: 0 0 0 3px rgba(88,166,255,0.4);
+  --overlay-bg:   rgba(0,0,0,0.6);
+
+  --color-success-500: #3FB950;
+  --color-success-100: rgba(63,185,80,0.12);
+  --color-warning-500: #D29922;
+  --color-warning-100: rgba(210,153,34,0.12);
+  --color-danger-500:  #F85149;
+  --color-danger-100:  rgba(248,81,73,0.12);
+  --color-info-500:    #58A6FF;
+  --color-info-100:    rgba(88,166,255,0.12);
+}
+
+/* ============================================================
+   HIGH CONTRAST — unchanged, already passing
+   ============================================================ */
+[data-theme="high-contrast"] {
+  --bg-canvas:    #000000;
+  --bg-surface:   #0A0A0A;
+  --bg-surface-2: #111111;
+  --bg-surface-3: #1A1A1A;
+  --bg-inset:     #000000;
+
+  --text-primary:   #FFFFFF;
+  --text-secondary: #F0F0F0;
+  --text-tertiary:  #DDDDDD;
+  --text-disabled:  #888888;
+  --text-on-primary:#000000;
+
+  --border-subtle:  #555555;
+  --border-default: #888888;
+  --border-strong:  #FFFFFF;
+
+  --accent-primary: #FFFFFF;
+  --accent-hover:   #FFFFFF;
+  --accent-active:  #FFFFFF;
+  --accent-subtle:  rgba(255,255,255,0.12);
+  --accent-muted:   rgba(255,255,255,0.22);
+
+  --shadow-focus:        0 0 0 3px #FFFFFF;
+  --color-success-500:   #5DDB9A;
+  --color-warning-500:   #FFCC44;
+  --color-danger-500:    #FF7777;
+  --color-info-500:      #88CCFF;
+  --color-success-100:   rgba(93,219,154,0.15);
+  --color-warning-100:   rgba(255,204,68,0.15);
+  --color-danger-100:    rgba(255,119,119,0.15);
+  --color-info-100:      rgba(136,204,255,0.15);
+}
+
+/* ============================================================
+   FONT SIZE SCALE — applied to <html>
+   ============================================================ */
+[data-font-size="sm"] { font-size: 14px; }
+[data-font-size="md"] { font-size: 16px; }
+[data-font-size="lg"] { font-size: 18px; }
+[data-font-size="xl"] { font-size: 20px; }
