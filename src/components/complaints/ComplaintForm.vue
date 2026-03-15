@@ -126,7 +126,7 @@
 
     <!-- Anonymous toggle -->
     <div class="anon-section">
-      <label class="anon-row" for="c-anonymous">
+      <div class="anon-row">
         <div class="anon-info">
           <EyeOff :size="18" aria-hidden="true" class="anon-icon" />
           <div>
@@ -150,15 +150,7 @@
         >
           <span class="toggle-thumb" aria-hidden="true"></span>
         </div>
-        <input
-          id="c-anonymous"
-          type="checkbox"
-          v-model="form.anonymous"
-          class="sr-only"
-          aria-hidden="true"
-          tabindex="-1"
-        />
-      </label>
+      </div>
     </div>
 
     <!-- Submit -->
