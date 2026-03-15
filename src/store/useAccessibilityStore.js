@@ -14,10 +14,9 @@ export const useAccessibilityStore = defineStore('accessibility', () => {
       fontSize.value     = prefs.fontSize     || 'md'
       reducedMotion.value= prefs.reducedMotion|| false
     } else {
-      // Respect OS-level preferences on first visit
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        theme.value = 'dark'
-      }
+      // Default: always start in light mode.
+      // Only respect reduced-motion OS preference (not color scheme).
+      theme.value = 'light'
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         reducedMotion.value = true
       }

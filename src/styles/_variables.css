@@ -192,6 +192,9 @@
   --accent-subtle:  rgba(255,255,255,0.12);
   --accent-muted:   rgba(255,255,255,0.22);
 
+  --header-bg:   #000000;
+  --header-blur: none;
+
   --shadow-focus:        0 0 0 3px #FFFFFF;
   --color-success-500:   #5DDB9A;
   --color-warning-500:   #FFCC44;

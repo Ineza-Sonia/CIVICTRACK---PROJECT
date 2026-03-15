@@ -474,4 +474,54 @@ onUnmounted(()=> document.removeEventListener('click', onClickOutside))
   .header-actions .btn    { display: none; }
   .mobile-menu-btn        { display: flex; }
 }
+
+/* ── High Contrast: all navbar elements must be visible by default ── */
+[data-theme="high-contrast"] .app-header {
+  border-bottom: 2px solid #FFFFFF;
+}
+[data-theme="high-contrast"] .logo {
+  color: #FFFFFF;
+}
+[data-theme="high-contrast"] .logo-accent {
+  color: #FFFFFF;
+}
+[data-theme="high-contrast"] .nav-link {
+  color: #FFFFFF;
+}
+[data-theme="high-contrast"] .nav-link:hover,
+[data-theme="high-contrast"] .nav-link[aria-current="page"] {
+  color: #FFFFFF;
+  background: rgba(255,255,255,0.18);
+  outline: 2px solid #FFFFFF;
+}
+[data-theme="high-contrast"] .icon-btn {
+  color: #FFFFFF;
+}
+[data-theme="high-contrast"] .icon-btn:hover {
+  color: #000000;
+  background: #FFFFFF;
+}
+[data-theme="high-contrast"] .user-btn {
+  color: #FFFFFF;
+}
+[data-theme="high-contrast"] .user-btn:hover {
+  background: rgba(255,255,255,0.18);
+}
+[data-theme="high-contrast"] .btn-ghost {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+[data-theme="high-contrast"] .btn-ghost:hover {
+  background: #FFFFFF;
+  color: #000000;
+}
+[data-theme="high-contrast"] .mobile-nav-link {
+  color: #FFFFFF;
+}
+[data-theme="high-contrast"] .mobile-nav-link:hover,
+[data-theme="high-contrast"] .mobile-nav-link[aria-current="page"] {
+  background: rgba(255,255,255,0.18);
+  color: #FFFFFF;
+  outline: 2px solid #FFFFFF;
+}
 </style>
